@@ -1,0 +1,15 @@
+Esse exercício tem como base o algoritmo feito em sala: CrudFesta (Ver pasta Projeto CrudFesta)
+
+QUESTÃO 1 - Na função CADASTRAR() valide para que o usuário somente digite letras para escrever o nome.
+
+QUESTÃO 2 - Na função EDITAR() validar para que a variável POSIÇÃO seja sempre numérica e a variável 
+RESPOSTA seja sempre "S" ou "N".
+Extra: Faça com que as opção digitas sempre fiquem em maiúsculo.
+
+QUESTÃO 3 - Na função EXCLUIR() validar para que a variável POSIÇÃO seja sempre numérica.
+
+QUESTÃO 4 - Na função BUSCA() validar para que a variável BUSCA seja sempre alfabética, 
+e que ignore letras maiúsculas e minúsculas digitas pelo usuário.
+
+
+

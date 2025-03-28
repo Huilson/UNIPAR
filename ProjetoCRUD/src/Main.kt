@@ -68,7 +68,7 @@ private fun criar() {
 }
 
 private fun listar(){
-    var i = 0//para pode usar o indice no FOREACH
+    var i = 0//para poder usar o indice no FOREACH
     listaDeConvidados.forEach { convidado ->//a setinha se chama LAMBDA
         println("Posição: ${i++}, " +
                 "Nome: ${convidado.nome}, " +
