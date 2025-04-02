@@ -1,4 +1,5 @@
 //Variavel goblal
+var playerMap = mutableMapOf<String, Int>()
 var playerList = mutableListOf<String>()
 var scoreList = mutableListOf<Int>()
 
@@ -12,7 +13,7 @@ fun main() {
 
         when(opcao.toInt()){
             1 -> jogar() //A SETINHA SE CHAMA LAMBDA
-            2 -> mostrarPlacar()
+            2 -> mostrarPlacarComMap()
             3 -> print("saindo...")
         }
     }while(opcao != "0")
@@ -31,30 +32,27 @@ fun jogar(){
         var jogada = readln().uppercase()//Movimento do jogador
 
         //instâncias dos elementos do jogo
-        var pedra = Pedra()
-        var tesoura = Tesoura()
-        var papel = Papel()
+
 
         var movimentoPC = computador()//movimento do PC
         println("O computador jogou: $movimentoPC")
 
         when(jogada){
             "PEDRA" -> {
-                pontos += pedra.luta(movimentoPC)
-        }
+
+            }
             "PAPEL"-> {
-                pontos += papel.luta(movimentoPC)
+
             }
             "TESOURA"-> {
-                pontos += tesoura.luta(movimentoPC)
+
             }
         }
         println("Você tem: $pontos pontos!")
         println("Próxima rodada!")
         rodadas++ //no final da rodada incrementa
     }while(rodadas <= 3)
-    playerList.add(nickname)
-    scoreList.add(pontos)
+    validaPontos(nickname, pontos)
 }
 
 fun computador(): String{
@@ -72,14 +70,35 @@ fun computador(): String{
     }
 }
 
-fun mostrarPlacar(){
+fun validaPontos(nickname: String, pontos: Int): Boolean{
+    if (playerMap.isEmpty()){
+        return false
+    }
+    playerMap.forEach { (t, u) ->
+        if (t == nickname){
+            if (u > pontos){
+                println("NEW RECORD $t!")
+                playerMap[nickname] = pontos
+            }
+        }
+    }
+    return true
+}
+
+fun mostrarPlacarComMap(){
+    println("\n\n\n")
+    println("PLAYER \t PONTOS")
+    playerMap.forEach { t, u ->
+        println("$t \t $u")
+    }
+}
+
+fun mostrarPlacarSemMap(){
     println("\n\n\n")
     println("PLAYER \t PONTOS")
 
-    var i = 0//INDEX
+    var i = 0
     for(player in playerList){
-        // o /t significa tabulação
         println("$player \t ${scoreList[i]}")
-        i++;
     }
 }
