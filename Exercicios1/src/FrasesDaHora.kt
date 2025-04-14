@@ -1,6 +1,8 @@
 import java.time.LocalTime
+import java.util.*
 
 fun main(){
+
     when(LocalTime.now().hour){
         0->println("Você consegue!")
         1->println("Se esforçe!")
@@ -27,4 +29,13 @@ fun main(){
         22-> println("Oh loko meu! Tá pegando fogo!")
         23-> println("A vingança nunca é plena, mata a alma e a envenena.")
     }
+}
+
+fun versaoChatGpt(){
+    val calendario = Calendar.getInstance()
+    val hora = calendario.get(Calendar.HOUR_OF_DAY)
+    val frases = listOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
+        "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23")
+    val frase = frases[hora%frases.size]
+    println(frase)
 }
