@@ -27,27 +27,27 @@ fun main(){
             listaNomesDoMeio.add(aux.substringBefore(" "))//finalmente pegamos o nome do meio
             listaSobrenomes.add(aux.substringAfter(" "))
 
-        }else{//não tem nome composto
+        }else if(nomeCompleto != "sair"){//não tem nome composto
             listaNomes.add(nomeCompleto.substringBefore(" "))
-            listaSobrenomes.add(nomeCompleto.substringBefore(" "))
+            listaSobrenomes.add(nomeCompleto.substringAfter(" "))
         }
-    }while (nomeCompleto == "sair")
+    }while (nomeCompleto != "sair")
     //Ordena as listas em ordem alfabética
     listaNomes.sort()
     listaNomesDoMeio.sort()
     listaSobrenomes.sort()
 
-    println("Os nomes são: ")
+    println("\nOs nomes são: ")
     listaNomes.forEach { nome ->
         print("$nome - ")
     }//FIM NOMES
 
-    println("Os nomes são: ")
+    println("\nOs nomes do meio são: ")
     listaNomesDoMeio.forEach { nomeDoMeio ->
         print("$nomeDoMeio - ")
     }//FIM NOME DO MEIO
 
-    println("Os nomes são: ")
+    println("\nOs sobrenomes são: ")
     listaSobrenomes.forEach { sobrenome ->
         print("$sobrenome - ")
     }//FIM SOBRENOME
