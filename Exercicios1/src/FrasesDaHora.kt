@@ -2,7 +2,6 @@ import java.time.LocalTime
 import java.util.*
 
 fun main(){
-
     when(LocalTime.now().hour){
         0->println("Você consegue!")
         1->println("Se esforçe!")

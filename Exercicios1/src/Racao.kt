@@ -1,5 +1,5 @@
 //Versão Sofisticada
-/*open class Racao(
+open class Racao(
     var preco: Double,
     var peso: Double,
     var sabor: String
@@ -21,7 +21,7 @@ class RacaoDeGato(
         preco = if (paraCastrado)
             preco * 0.85
         else
-            preco * 0.80
+            preco * 0.80    
     }
 }
 
@@ -40,9 +40,10 @@ class RacaoDeCachorro(
         else
             preco * 0.75
     }
-}*/
+}
 
 //Versão simplificada
+/*
 open class Racao(){
     var preco: Double = 0.0
     var peso: Double = 0.0
@@ -73,4 +74,4 @@ class RacaoCachorro(): Racao() {
             preco * 0.75
     }
 
-}
+}*/
