@@ -53,8 +53,8 @@ fun main() {
     //-----------------------------------------------
 
     val bubalsauro = mapOf(
-        "GRAMA" to listOf("ÁGUA, TERRA, PEDRA"),//a minha é uma String
-        "VENENO" to listOf("FADA, PLANTA"),//o meu valor é uma lista de String
+        "GRAMA" to listOf("ÁGUA", "TERRA", "PEDRA"),//a minha é uma String
+        "VENENO" to listOf("FADA", "PLANTA"),//o meu valor é uma lista de String
         //CHAVE TO VALOR
     )
 }
