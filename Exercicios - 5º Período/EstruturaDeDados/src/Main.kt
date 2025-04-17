@@ -30,7 +30,7 @@ fun main() {
     //Verica tudo o que tem na prateleira (Pilha)
     println(pilha)
 
-
+//-----------------------------------------------
     //crio um Fila
     val fila = LinkedList<String>()
 
@@ -50,4 +50,11 @@ fun main() {
         println("O user ${fila.removeFirst()} entrou no servidor")
         Thread.sleep(5000)//Faz o processador parar por 5 segundos
     }while(fila.isNotEmpty())//Enquanto tiver gente na fila, repita!
+    //-----------------------------------------------
+
+    val bubalsauro = mapOf(
+        "GRAMA" to listOf("ÁGUA, TERRA, PEDRA"),//a minha é uma String
+        "VENENO" to listOf("FADA, PLANTA"),//o meu valor é uma lista de String
+        //CHAVE TO VALOR
+    )
 }

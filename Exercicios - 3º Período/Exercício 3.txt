@@ -1,0 +1,7 @@
+Entrega: 23/04/2025
+
+Crie vários mapas de pokémons (151 no total). Veja a lista:
+https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_Kanto_Pok%C3%A9dex_number
+
+A chave será o tipo do pokémon (ou tipos se houver 2), já o valor de cada chave será um array ou lista de Strings do qual o tipo é super
+efetivo (mais forte). https://bulbapedia.bulbagarden.net/wiki/Type
