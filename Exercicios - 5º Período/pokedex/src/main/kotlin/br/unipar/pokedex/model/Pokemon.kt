@@ -7,9 +7,9 @@ import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.PositiveOrZero
 
 @Entity
-class Pokemon (
+data class Pokemon (
     @Id
-    var numeroPokedex: Int,
+    var numeroPokedex: String? = null,//ID do documento
 
     @NotBlank
     var nome: String,
@@ -20,5 +20,7 @@ class Pokemon (
     var tipo_2: Tipo?, //Ou ele ter um segundo ou vai ser nulo
 
     @PositiveOrZero
-    var poder: Int
+    var poder: Int,
+
+    var descricao: String? = null
 )
