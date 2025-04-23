@@ -52,9 +52,4 @@ fun main() {
     }while(fila.isNotEmpty())//Enquanto tiver gente na fila, repita!
     //-----------------------------------------------
 
-    val bubalsauro = mapOf(
-        "GRAMA" to listOf("ÁGUA", "TERRA", "PEDRA"),//a minha CHAVE é uma String
-        "VENENO" to listOf("FADA", "PLANTA"),//o meu VALOR é uma lista de String
-        //CHAVE TO VALOR
-    )
 }
