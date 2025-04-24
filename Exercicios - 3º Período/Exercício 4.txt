@@ -1,0 +1,8 @@
+Crie um sistema de batalha pokemon (todos armazenados em mapas) onde dois jogadores possam se enfrentar entre si, criando times de pokemons. Elementos do sistema:
+
+- Faça com que cada jogador tenha um nickname.
+- Faça com que cada jogador possa criar seu time (defina um limite de pokemons para cada time).
+- No final de cada batalha determine quem ganhou cada partida.
+- Adicione mais elementos aos Pokemons (mapas) e a batalha, seja criativo.
+
+O trabalho pode ser feito em duplas ou em trios.
