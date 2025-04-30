@@ -1,12 +1,64 @@
 package br.unipar.pokedex.controller
 
 import br.unipar.pokedex.model.Pokemon
+import br.unipar.pokedex.model.Tipo
+import br.unipar.pokedex.service.PokemonService
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.DeleteMapping
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class PokedexController {
+@RequestMapping("/pokemon")
+class PokedexController (
+    private val pokemonService: PokemonService
+){
 
-    //fun listarPokemons(): List<Pokemon>{
-        // precisa retornar uma lista do Repositório
-    //}
+    @GetMapping("/tipo/{tipo}")
+    fun getUsersByType(@PathVariable tipo: String): ResponseEntity<List<Pokemon>> {
+        val pokemons = pokemonService.buscarPorTipos(tipo.uppercase())
+        return ResponseEntity.ok(pokemons)
+    }
+
+    @PostMapping
+    fun cadastrarPokemons(@RequestBody pokemon: Pokemon) : ResponseEntity<Pokemon>{
+        return ResponseEntity.ok(
+            pokemonService.registrarPokemon(
+                pokemon.numeroPokedex!!, pokemon.nome, pokemon.tipo_1,
+                pokemon.tipo_2, pokemon.poder, pokemon.descricao
+            )
+        )
+    }
+
+    @GetMapping("/{numeroPokedex}")
+    fun buscarPokemon(@PathVariable numeroPokedex: String) : ResponseEntity<Pokemon>{
+        val pokemon = pokemonService.encontrarPokemon(numeroPokedex)
+        return if (pokemon != null) {
+            ResponseEntity.ok(pokemon)
+        } else {
+            ResponseEntity.notFound().build()
+        }
+    }
+
+    @GetMapping
+    fun buscarTodos() : ResponseEntity<List<Pokemon>>{
+        val pokemons = pokemonService.encontrarTodos()
+        return ResponseEntity.ok(pokemons)//Não precisa de if
+        //porque ele retorna uma lista, se não houver nada a lista vem vazia
+    }
+
+    @DeleteMapping("/{numeroPokedex}")
+    fun excluirPokemon(@PathVariable numeroPokedex: String) : ResponseEntity<Void>{
+        return if (pokemonService.excluirRegistro(numeroPokedex)){
+            ResponseEntity.noContent().build()
+        }else{
+            ResponseEntity.notFound().build()
+        }
+    }
+
+
 }

@@ -1,26 +1,15 @@
 package br.unipar.pokedex.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.validation.constraints.NotBlank
-import jakarta.validation.constraints.PositiveOrZero
-
-@Entity
 data class Pokemon (
-    @Id
-    var numeroPokedex: String? = null,//ID do documento
+    val numeroPokedex: String? = null,//ID do documento
 
-    @NotBlank
-    var nome: String,
+    val nome: String = "",
 
-    @NotBlank
-    var tipo_1: Tipo,
+    val tipo_1: Tipo = Tipo.NORMAL,
 
-    var tipo_2: Tipo?, //Ou ele ter um segundo ou vai ser nulo
+    val tipo_2: Tipo? = null, //Ou ele tem um segundo TIPO ou vai ser nulo
 
-    @PositiveOrZero
-    var poder: Int,
+    val poder: Int = 0,
 
-    var descricao: String? = null
+    val descricao: String? = null
 )
