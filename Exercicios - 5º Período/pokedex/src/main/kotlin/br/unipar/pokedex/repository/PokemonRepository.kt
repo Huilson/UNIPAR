@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository
 @Repository
 class PokemonRepository(
     //Essa val é a instância do banco
-    private val firestore : Firestore = FirestoreClient.getFirestore()//Buscar em um JSON
+    private val firestore : Firestore //= FirestoreClient.getFirestore()//Buscar em um JSON
 ) {
     private val collectionName = "pokedex" //O nome da coleção é o que esta no Firebase
 

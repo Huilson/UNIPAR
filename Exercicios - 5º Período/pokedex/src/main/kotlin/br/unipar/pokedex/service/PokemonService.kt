@@ -45,5 +45,4 @@ class PokemonService(
     fun excluirRegistro(numeroPokedex: String) : Boolean{
         return pokemonRepository.excluirId(numeroPokedex)
     }
-
 }

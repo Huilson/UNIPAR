@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pokedex</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<h1>Pokedex</h1>
+<div class="pokedex">
+    <div class="image-card" th:each="image : ${images}">
+        <img th:src="${image.url}" th:alt="${image.name}"/>
+        <input type="text" th:value="${image.url}" readonly/>
+    </div>
+</div>
+</body>
+</html>
