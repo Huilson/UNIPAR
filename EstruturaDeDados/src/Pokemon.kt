@@ -34,9 +34,9 @@ fun main(){
 
     //Map de Maps
     val time_1 = mapOf(
-        time1_1 to pokemons[time1_1],
-        time1_2 to pokemons[time1_2],
-        time1_3 to pokemons[time1_3]
+        1 to pokemons[time1_1],
+        2 to pokemons[time1_2],
+        3 to pokemons[time1_3]
     )
 
     println("Jogador 2 - Escolha seu time: ")
