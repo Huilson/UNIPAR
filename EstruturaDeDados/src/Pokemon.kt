@@ -1,4 +1,7 @@
 fun main(){
+    /*MAPAS de MAPAS onde cada chave é uma String
+    *e cada valor é um MAPA do pokemon específico
+    */
     val pokemons = mapOf(
         "bulbasaur" to bulbasaur,
         "charmander" to charmander,
@@ -22,22 +25,34 @@ fun main(){
         "rattata" to rattata
     )
 
-    var i = 1
-    pokemons.forEach { t, u ->
-        println("${i++} - $t")
+    var i = 1 //Variável de índice
+    pokemons.forEach { chave, valor ->
+        println("${i++} - $chave")
     }
 
     println("Jogador 1 - Escolha seu time: ")
-    val time1_1 = readln().lowercase()
-    val time1_2 = readln().lowercase()
-    val time1_3 = readln().lowercase()
+    val time1_1 = readln().lowercase()//Aqui precisa escrever a chave do mapa de mapas
+    val time1_2 = readln().lowercase()//Aqui precisa escrever a chave do mapa de mapas
+    val time1_3 = readln().lowercase()//Aqui precisa escrever a chave do mapa de mapas
 
     //Map de Maps
     val time_1 = mapOf(
-        1 to pokemons[time1_1],
-        2 to pokemons[time1_2],
+        1 to pokemons[time1_1],//Chave númerica onde busca o nome do pokemon dentro do Mapa de Mapas
+        2 to pokemons[time1_2],//A posição do pokemon que eu quero é a própria chave
         3 to pokemons[time1_3]
     )
+
+    /**
+     * EXEMPLO: VETOR -> vetor[1] = valor da posição 1
+     *          MAPA -> mapa[chave] = valor da posição da chave
+     * Resumindo, a minha pode ser qualquer valor, ou qualquer tipo de dado
+     * CHAVES são identificadores únicos, e não podem repetir.
+     * Analogia: imagine um conjunto de baús, onde cada baú tem um nome
+     * e uma chave, a chave de cada baú só funciona no mesmo nome.
+     * Exemplo: O báu 1 só abre com a chave 1,
+     * O baú "abelha" só abre com a chave "abelha".
+     * */
+
 
     println("Jogador 2 - Escolha seu time: ")
     val time2_1 = readln().lowercase()
@@ -45,55 +60,10 @@ fun main(){
     val time2_3 = readln().lowercase()
 
     val time_2 = mapOf(
-        1 to pokemons[time2_1],
+        1 to pokemons[time2_1],//Segue a mesma lógica
         2 to pokemons[time2_2],
         3 to pokemons[time2_3]
     )
 
-    batalhar(time_1, time_2)
-    /*println("1º Pokemon do time 1")
-    println(time_1[1])//Tipo do Pokemon
-    //println(time_1[1])//De quem ele ganha
-
-    println("1º Pokemon do time 2")
-    println(time_2[1])//Tipo do Pokemon
-    //println(time_2[1])//De quem ele ganha*/
-
-    //Para a comparação na hora da batalha, faça um FOR
-/*
-    println("\n\n ${bulbasaur["GRAMA"]}")
-    println(bulbasaur["VENENO"])
-
-    if(charmander.containsKey("GRAMA")){
-        println("Ele é do tipo GRAMA!")
-    }else{
-        println("Ele não é do tipo GRAMA")
-    }
-
-    if("FOGO" in charmander){
-        println("Sim ele é FOGO")
-    }
-
-    if(charmander["FOGO"]?.contains("GRAMA")!!){
-        println("Ele é forte contra GRAMA")
-    }else{
-        println("Ele não é forte contra GRAMA")
-    }
-
-    for((chave, valor) in  mew){
-        println("A chave é $chave -> o valor é $valor")
-    }
-
-
-    //EXEMPLOS
-    val carro = mapOf(
-        "PNEU" to 32,
-        "VOLANTE" to true,
-        "MOTOR" to 2.4,
-        "PLACA" to "AS124A"
-        )
-    for((caracteristica, descricao) in carro){
-        println("Caracteristca -> $caracteristica; Descricao -> $descricao")
-    }*/
-
+    batalhar(time_1, time_2)//Chama a função BATALHA, que está em outro arquivo
 }
