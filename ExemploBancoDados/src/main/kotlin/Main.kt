@@ -21,15 +21,17 @@ fun main() {
 
         val salvar = "INSERT INTO pessoa (id, cpf, nome)" +
                 "VALUES (2, '000.000.000-01', 'Raissa da Silva')"
+        val atualizar = "UPDATE pessoa SET cpf = '000.000.000-10' WHERE id = 2"
+        val excluir = "DELETE FROM pessoa WHERE cpf = '000.000.000-10'"
 
-        val salvarBanco = conexao.createStatement().execute(salvar)
+        val salvarBanco = conexao.createStatement().execute(excluir)
 
         //O ReultSet é um ARRAY de RESULTADOS
         val query : ResultSet = conexao.createStatement().executeQuery("" +
                 "SELECT * FROM pessoa")
 
         while(query.next()){
-            val informacao = query.getString("nome")
+            val informacao = query.getString("cpf")
             println(informacao)
         }
 
