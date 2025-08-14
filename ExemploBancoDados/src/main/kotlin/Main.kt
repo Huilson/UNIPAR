@@ -27,8 +27,7 @@ fun main() {
         val salvarBanco = conexao.createStatement().execute(excluir)
 
         //O ReultSet é um ARRAY de RESULTADOS
-        val query : ResultSet = conexao.createStatement().executeQuery("" +
-                "SELECT * FROM pessoa")
+        val query : ResultSet = conexao.createStatement().executeQuery("SELECT * FROM pessoa")
 
         while(query.next()){
             val informacao = query.getString("cpf")
@@ -37,7 +36,6 @@ fun main() {
 
         query.close() //Encerra a query
         conexao.close() //Encerra a conexão
-
 
     } catch (e: Exception){
         e.printStackTrace()

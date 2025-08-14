@@ -22,7 +22,7 @@ class PokemonService(
         poder : Int,
         descricao : String?//pode ser nulo
     ) : Pokemon {
-        return pokemonRepository.salvar(
+        return pokemonRepository.cadastrar(
             Pokemon(
                 numeroPokedex = numeroPokedex,
                 nome = nome,

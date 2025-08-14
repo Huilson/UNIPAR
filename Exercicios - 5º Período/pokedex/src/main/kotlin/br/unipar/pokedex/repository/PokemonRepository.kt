@@ -13,7 +13,7 @@ class PokemonRepository(
 ) {
     private val collectionName = "pokedex" //O nome da coleção é o que esta no Firebase
 
-    fun salvar(pokemon : Pokemon) : Pokemon{
+    fun cadastrar(pokemon : Pokemon) : Pokemon{
         val documento = firestore.collection(collectionName).document(pokemon.numeroPokedex!!)//Busca um documento pelo ID
 
         val pokemonRegistrado = pokemon.copy(numeroPokedex = documento.id)//Copia do que foi resgatado do banco

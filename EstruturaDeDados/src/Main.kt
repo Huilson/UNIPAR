@@ -14,7 +14,7 @@ fun main() {
 
     //Ver tamanho da Pilha
     println(pilha.size)
-
+    pilha.removeLast()
     //Remover um elemento da prateleira(Pilha)
     val esgotado = pilha.pop()
     println("Esgotados: $esgotado")

@@ -1,10 +1,13 @@
 package br.unipar.pokedex.controller
 
 import br.unipar.pokedex.model.Pokemon
+import br.unipar.pokedex.repository.PokedexRepository
+import br.unipar.pokedex.repository.PokemonRepository
 import br.unipar.pokedex.service.PokedexService
 import br.unipar.pokedex.service.PokemonService
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
+import org.springframework.stereotype.Repository
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -17,9 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 @RequestMapping("/pokemon")
 class PokedexController(
     private val pokemonService: PokemonService,
-    private val pokedexService: PokedexService
+    private val pokedexService: PokedexService,
+    private val repository: PokemonRepository,
 
-) {
+    ) {
 
     @GetMapping("/tipo/{tipo}")
     fun getUsersByType(@PathVariable tipo: String): ResponseEntity<List<Pokemon>> {
@@ -30,10 +34,7 @@ class PokedexController(
     @PostMapping
     fun cadastrarPokemons(@RequestBody pokemon: Pokemon): ResponseEntity<Pokemon> {
         return ResponseEntity.ok(
-            pokemonService.registrarPokemon(
-                pokemon.numeroPokedex!!, pokemon.nome, pokemon.tipo_1,
-                pokemon.tipo_2, pokemon.poder, pokemon.descricao
-            )
+            repository.cadastrar(pokemon)
         )
     }
 
