@@ -22,4 +22,26 @@ fun main() {
             setor = Setor.MONTAGEM
         )
     )
+
+    val clt = Profissional (
+        nome = "Fabio",
+        idade = 42,
+        experiencia = 3,
+        setor = Setor.LOGISTICA,
+        funcao = Funcao.CARREGADOR,
+        cpf = "00090912339",
+        sexo = Sexo.MASCULINO,
+        salario = "1000.00".toBigDecimal(),
+        habilidade = "Esforçado"
+    )
+
+    println("Começar a instalação")
+    /*if(clt.instalarCaixaDaAgua()){
+        println("Parabens, a caixa foi instalada")
+    }else{
+        println("Deu ruim")
+    }*/
+    println(clt.instalacaoCompleta())
+
+
 }
