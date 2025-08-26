@@ -19,7 +19,8 @@ fun main() {
             experiencia = 2,
             habilidade = "Forte, Corajoso, Rápido",
             funcao = Funcao.OPERADOR,
-            setor = Setor.MONTAGEM
+            setor = Setor.MONTAGEM,
+            equipamento = listOf("parafusadeira", "parafusos")
         )
     )
 
@@ -32,7 +33,8 @@ fun main() {
         cpf = "00090912339",
         sexo = Sexo.MASCULINO,
         salario = "1000.00".toBigDecimal(),
-        habilidade = "Esforçado"
+        habilidade = "Esforçado",
+        equipamento = listOf("parafusadeira", "parafusos", "EPIs")
     )
 
     println("Começar a instalação")
