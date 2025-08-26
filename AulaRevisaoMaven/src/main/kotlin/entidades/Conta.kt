@@ -4,6 +4,6 @@ import java.math.BigDecimal
 
 class Conta(
     val pessoa: Pessoa,//opcional
-    val saldo : BigDecimal,
-    val id : Long
+    var saldo : BigDecimal,
+    val id : Long //numeroDaConta
 )

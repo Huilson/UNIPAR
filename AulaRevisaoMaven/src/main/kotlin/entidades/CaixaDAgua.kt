@@ -1,9 +1,9 @@
 package entidades
 
-import enumeradores.Material
+
 
 class CaixaDAgua (
-    val material: Material,
+    val material: String,
     val capacidade: Double?,
     val altura: Double,
     val largura: Double,

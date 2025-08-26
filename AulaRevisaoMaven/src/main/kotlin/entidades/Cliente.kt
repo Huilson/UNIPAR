@@ -1,7 +1,6 @@
 package entidades
 
 import enumeradores.Sexo
-import java.math.BigDecimal
 
 class Cliente(
     nome: String,
@@ -15,4 +14,6 @@ class Cliente(
     idade = idade,
     sexo = sexo,
     cpf = cpf
-)
+){
+
+}

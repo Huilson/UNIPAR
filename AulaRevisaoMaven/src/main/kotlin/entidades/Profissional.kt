@@ -1,8 +1,8 @@
 package entidades
 
-import enumeradores.Setor
-import enumeradores.Funcao
-import enumeradores.Sexo
+import org.example.enumeradores.Funcao
+import org.example.enumeradores.Setor
+import org.example.enumeradores.Sexo
 import java.math.BigDecimal
 class Profissional (
     cpf: String,
@@ -33,8 +33,9 @@ class Profissional (
             "Instalação mal sucedida"
         }
     }
-
-    override fun receberConta(valor : BigDecimal) : BigDecimal{
-        return valor.multiply("-1".toBigDecimal())
+    //O Polimorfismo nada mais é do que fazer uma SOBREESCRITA do
+    //método que está na superclasse
+    override fun receberConta(conta : Conta, aPagar : BigDecimal){
+        conta.saldo = conta.saldo.subtract(aPagar)
     }
 }

@@ -10,7 +10,8 @@ open class Pessoa(
     val sexo : Sexo,//Podemos usar CTRL+SHIFT+R para substituir em massa
     val cpf : String
 ){
-    open fun receberConta(valor : BigDecimal) : BigDecimal {
-        return valor
+    //Comportamento
+    open fun receberConta(conta : Conta, aReceber : BigDecimal){
+        conta.saldo = conta.saldo.add(aReceber)
     }
 }
