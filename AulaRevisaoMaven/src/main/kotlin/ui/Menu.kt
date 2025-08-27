@@ -1,6 +1,6 @@
-package org.example.ui
+package ui
 
-import org.example.ui.cadastro.cadastrarPessoa
+import ui.cadastro.cadastrarPessoa
 
 fun menu() {
     do {

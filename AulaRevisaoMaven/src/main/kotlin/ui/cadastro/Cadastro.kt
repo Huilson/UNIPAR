@@ -1,4 +1,4 @@
-package org.example.ui.cadastro
+package ui.cadastro
 
 import entidades.Pessoa
 import enumeradores.Sexo
