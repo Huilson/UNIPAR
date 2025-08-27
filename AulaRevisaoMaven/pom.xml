@@ -84,6 +84,13 @@
             <version>1.9.22</version>
         </dependency>
         <!--INSERIR AQUI-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.7</version>
+        </dependency>
+
     </dependencies>
+
 
 </project>
