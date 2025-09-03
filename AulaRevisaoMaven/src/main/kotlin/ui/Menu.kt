@@ -2,6 +2,7 @@ package ui
 
 import org.example.ui.cadastro.editarrCaixaDAgua
 import org.example.ui.cadastro.excluirCaixa
+import org.example.ui.cadastro.listarCaixas
 import ui.cadastro.cadastrarCaixaDAgua
 import ui.cadastro.cadastrarPessoa
 
@@ -26,7 +27,7 @@ fun menu() {
             3 -> println("Abrindo cadastro de serviços")
             4 -> println("Abrindo lista de pessoa")
             5 -> println("Abrindo lista de caixas")
-            6 -> println("Abrindo lista de serviços")
+            6 -> listarCaixas()
             7 -> println("Abrindo edição de pessoa")
             8 -> editarrCaixaDAgua()
             9 -> println("Abrindo edição de serviços")
