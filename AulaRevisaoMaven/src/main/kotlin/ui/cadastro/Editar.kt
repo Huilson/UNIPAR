@@ -1,4 +1,4 @@
-package ui.cadastro
+package org.example.ui.cadastro
 
 import entidades.CaixaDAgua
 import entidades.Pessoa
@@ -6,34 +6,7 @@ import enumeradores.Material
 import enumeradores.Sexo
 import org.example.entidadeGerenciadora.EntidadeJDBC
 
-fun cadastrarPessoa(){
-    println("Nome: ")
-    val nome = readln()
-
-    println("Idade: ")
-    val idade = readln().toInt()
-
-    println("cpf: ")
-    val cpf = readln()
-
-    println("Escolha seu sexo: ")
-    println("1 - Masculino")
-    println("2 - Feminino")
-    val sexo = readln().toInt()
-    var opcao = Sexo.MASCULINO
-    
-    when(sexo){
-        2 -> opcao = Sexo.FEMENINO
-    }
-    Pessoa(
-        nome = nome,
-        idade = idade,
-        cpf = cpf,
-        sexo = opcao
-    )
-}
-
-fun cadastrarCaixaDAgua(){
+fun editarrCaixaDAgua(){
     println("Digite a capacidade: ")
     val litros = readln().toDouble()
 
@@ -63,14 +36,18 @@ fun cadastrarCaixaDAgua(){
         3 -> material = Material.METAL
         4 -> material = Material.ARGAMASSA
     }
+
+    println("Digite o ID da caixa: ")
+    val id = readln().toLong()
+
     val banco = EntidadeJDBC(
         url = "jdbc:postgresql://localhost:5432/revisao",
         user = "postgres",
         password = "5432"//no caso de vocês provavelmente será postgres
     )
-    banco.criarTabela()
-    banco.cadastrarCaixa(
+    banco.editarCaixa(
         CaixaDAgua(
+            id = id,
             material = material,
             largura = larg,
             altura = alt,
