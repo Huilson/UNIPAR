@@ -3,6 +3,7 @@ package org.example.entidadeGerenciadora
 import entidades.CaixaDAgua
 import java.sql.Connection
 import java.sql.DriverManager
+import java.sql.ResultSet
 
 class EntidadeJDBC(
     val url: String,
@@ -66,7 +67,15 @@ class EntidadeJDBC(
         val conecao = conectar()
         val jpql = "SELECT * FROM CaixaDaAgua"
 
-        conecao!!.createStatement().execute(jpql)
+        val resultados : ResultSet = conecao!!.createStatement().executeQuery(jpql)
+        while (resultados.next()) {
+            println("Material: ${resultados.getString("material")}")
+            println("Capacidade: ${resultados.getString("capacidade")}")
+            println("Altura: ${resultados.getString("altura")}")
+            println("Largura: ${resultados.getString("largura")}")
+            println("Profundidade: ${resultados.getString("profundidade")}")
+            println("Comentário: ${resultados.getString("blabla")}")
+        }
 
         conecao.close()
     }
