@@ -22,6 +22,10 @@ class EntidadeJDBC(
         }
         return null
     }
+    /**
+     * Faça com que a classe EntidadeJDBC e a função conectar,
+     * estejam no padrão Singleton
+     * */
 
     fun criarTabela() {
         val conecao = conectar()
@@ -76,7 +80,6 @@ class EntidadeJDBC(
             println("Profundidade: ${resultados.getString("profundidade")}")
             println("Comentário: ${resultados.getString("blabla")}")
         }
-
         conecao.close()
     }
 
