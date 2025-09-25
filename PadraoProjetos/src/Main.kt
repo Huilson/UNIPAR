@@ -1,9 +1,10 @@
-import singleton.Singleton
-import state.Entregar
-import state.Estado
+import singleton.Labirinto
 import state.Pacote
 
 fun main() {
+    //MazeGame.start()
+
+    /*
     //Esses pacotes podem ser o retorno de uma API qualquer
     val pacote1 = Pacote(id = "1", destinatario = "Zelda", remetente = "Link", estado = Estado.DESCONHECIDO)
     val pacote2 = Pacote(id = "2", destinatario = "Mario", remetente = "Luigi", estado = Estado.DESCONHECIDO)
@@ -18,7 +19,7 @@ fun main() {
     }
 
     Entregar().postarPacote(listaPacotes) //Enviar fila de pacotes
-    verificarPacotes(listaPacotes)
+    verificarPacotes(listaPacotes)*/
 }
 
 fun verificarPacotes(listaPacotes: MutableList<Pacote>) {

@@ -1,7 +1,7 @@
 package state
 
 class Receber {
-    fun saiuEntregar(pacote: Pacote, pacotes: MutableList<Pacote>){
+    fun saiuEntregar(pacote: Pacote){
         pacote.estado = Estado.RECEBIDO
 
         println("\n\nPacote chegou ao destino: ${pacote.destinatario}")

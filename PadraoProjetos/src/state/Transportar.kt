@@ -1,10 +1,9 @@
 package state
 
 import java.lang.Thread.sleep
-import kotlin.random.Random
 
 class Transportar {
-    fun rastrear(pacote: Pacote, pacotes: MutableList<Pacote>) {
+    fun rastrear(pacote: Pacote) {
         pacote.estado = Estado.DESPACHADO
 
         println("\nPacote: ${pacote.id} recebido, enviando para ${pacote.destinatario}")
@@ -19,6 +18,6 @@ class Transportar {
             print(".")
         }
 
-        Receber().saiuEntregar(pacote, pacotes)
+        Receber().saiuEntregar(pacote)
     }
 }

@@ -1,4 +1,4 @@
-package model
+package br.com.unipar.exemplo.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue

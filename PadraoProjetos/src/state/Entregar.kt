@@ -8,7 +8,7 @@ class Entregar() {
 
                 println("\nPacote postado por ${pacote.remetente}, enviando para a transportadora")
                 println("Novo estado do pacote ${pacote.id}: ${pacote.estado}")
-                Transportar().rastrear(pacote, pacotes)
+                Transportar().rastrear(pacote)
             }.start() //Quando se trabalha com threads é preciso dar um START nelas
 
         }//Fim do for-each
