@@ -7,7 +7,7 @@ import java.math.BigDecimal
 
 fun main() {
     //Classes aninhadas é quando temos uma classe dentro da outra.
-    val instalacao : Servico = Servico(
+    val instalacao: Servico = Servico(
         condicao = "boa",
         preco = "200.00".toBigDecimal(),
         profissional = Profissional(
@@ -24,7 +24,7 @@ fun main() {
         )
     )
 
-    val clt = Profissional (
+    val clt = Profissional(
         nome = "Fabio",
         idade = 42,
         experiencia = 3,

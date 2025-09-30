@@ -5,7 +5,7 @@ import kotlin.random.Random
 object Labirinto {
     private val map = mapOf(
         0 to arrayOf("██████", "███████", "███████"),
-        1 to arrayOf("█   ███", "█    ██", "█    ██"),
+        1 to arrayOf("█   ███", "█    ██", "██   ██"),
         2 to arrayOf("██   ██", "███   █", "█ █  ██"),
         3 to arrayOf("███   █", "█ █ █ █", "█    ██"),
         4 to arrayOf("████□██", "███□███", "████□██")

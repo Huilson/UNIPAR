@@ -2,7 +2,7 @@ import singleton.Labirinto
 import state.Pacote
 
 fun main() {
-    //MazeGame.start()
+    //Labirinto.start()
 
     /*
     //Esses pacotes podem ser o retorno de uma API qualquer

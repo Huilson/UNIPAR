@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251fb6b8-335f-4954-8f65-ad6c3a8d87ff" name="Changes" comment="Aula revisao" />
+    <list default="true" id="251fb6b8-335f-4954-8f65-ad6c3a8d87ff" name="Changes" comment="Aula revisao">
+      <change beforePath="$PROJECT_DIR$/../PadraoProjetos/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PadraoProjetos/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PadraoProjetos/src/singleton/Labirinto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PadraoProjetos/src/singleton/Labirinto.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,11 +24,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Huilson"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Huilson/UNIPAR.git",
+    "accountId": "dd0fc305-3355-43f5-a3e0-5276ab76c66a"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="30vw2akcjR2dkfj46pJI3asOR7s" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -39,6 +54,7 @@
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/huils/OneDrive/Documentos/GitHub/Unipar/UNIPAR/AulaRevisao/src/enumeradores",
