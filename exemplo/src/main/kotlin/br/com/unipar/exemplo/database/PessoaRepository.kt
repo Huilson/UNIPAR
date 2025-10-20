@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface PessoaRepository : JpaRepository<Pessoa, Long> {
+    //Aqui vai a herança da JPA com o nome da Entidade, e o tipo da PK
 }
