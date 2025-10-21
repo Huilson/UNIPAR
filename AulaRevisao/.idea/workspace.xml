@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251fb6b8-335f-4954-8f65-ad6c3a8d87ff" name="Changes" comment="Aula revisao">
-      <change beforePath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/controller/PessoaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/controller/PessoaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/database/PessoaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/database/PessoaRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/model/Pessoa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplo/src/main/kotlin/br/com/unipar/exemplo/model/Pessoa.kt" afterDir="false" />
-    </list>
+    <list default="true" id="251fb6b8-335f-4954-8f65-ad6c3a8d87ff" name="Changes" comment="Aula revisao" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
