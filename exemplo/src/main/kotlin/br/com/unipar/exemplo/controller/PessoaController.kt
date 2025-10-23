@@ -71,6 +71,5 @@ class PessoaController(
         }.orElse(
             ResponseEntity.notFound().build()
         )
-
     }
 }
