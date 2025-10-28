@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Exemplo</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const apiKey = [[${apiKey}]];
+    /*]]>*/
+</script>
+
+<script async
+        th:src="@{'https://maps.googleapis.com/maps/api/js?key=' + ${apiKey} + '&callback=initMap'}"
+        defer></script>
+
+<script>
+    function initMap() {
+        const pos = { lat: -26.08632792494587, lng: -53.043070728702816 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            center: pos,
+        });
+        new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: "Unipar Francisco Beltrão",
+        });
+    }
+</script>
+</body>
+</html>
