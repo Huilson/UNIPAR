@@ -2,6 +2,9 @@ package br.com.unipar.exemplo.controller
 
 import br.com.unipar.exemplo.database.PessoaRepository
 import br.com.unipar.exemplo.model.Pessoa
+import br.com.unipar.exemplo.service.PessoaRelatorio
+import org.springframework.http.HttpHeaders
+import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -19,7 +22,8 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/pessoa")
 class PessoaController(
-    private val pessoaRepository : PessoaRepository
+    private val pessoaRelatorio: PessoaRelatorio,
+    private val pessoaRepository : PessoaRepository,
     /**Uma injeção de dependência é necessária quando
      * usamos uma classe externa, essa injeção (variável)
      * deve ser privada, por uma questão de segurança.
@@ -71,5 +75,16 @@ class PessoaController(
         }.orElse(
             ResponseEntity.notFound().build()
         )
+    }
+
+    @GetMapping("/relatorio")
+    fun gerarRelatorio() : ResponseEntity<ByteArray>{
+        val pdf = pessoaRelatorio.gerarRelatorio()
+
+        return ResponseEntity.ok().header(
+            HttpHeaders.CONTENT_DISPOSITION,
+            "inline; filename = relatorio.pdf"
+        ).contentType(MediaType.APPLICATION_PDF).body(pdf)
+
     }
 }
